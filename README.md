@@ -29,7 +29,7 @@ slli/srli/srai rd, rs1, uimm5
 lui rd, uimm20
 將 unsigned 20-bit放到 rd暫存器的最高 20-bit，並將剩餘的 12-bit補 0，此指令可與 ADDI搭配，一起組合出完整 32-bit的數值。
 
-### [AUIPC(add upper immediate to pc)]()
+### [AUIPC(add upper immediate to pc)](https://github.com/Anderson991288/RISC-V-Instruction-Emulation/tree/main/AUIPC(add%20upper%20immediate%20to%20pc))
 auipc rd, uimm20
 unsigned 20-bit放到最高 20位元，剩餘 12位元補0，將此數值與 pc相加寫入 rd暫存器。
 
