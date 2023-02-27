@@ -2,7 +2,47 @@
 
 ## RISC-V C++ Emulator
 
-### CPU integer Register-Immediate Instructions : 
+### 整數運算指令 (Integer Computational Instructions)
+整數暫存器與常數指令 (Integer Register-Immediate Instructions)
+指令為暫存器與常數之間的運算
+
+ADDI
+addi rd, rs1, simm12
+常數部分為 sign-extended 12-bit，會將 12-bit做 sign-extension成 32-bit後，再與 rs1暫存器做加法運算，將結果寫入 rd暫存器，addi rd, rs1, 0 可被使用來當做 mov指令。
+
+SLTI
+slti rd, rs1, simm12
+常數部分為 sign-extended 12-bit，會將 12-bit做 sign-extension成 32-bit後，再與 rs1暫存器當做 signed number做比較，若 rs暫存器1小於常數，則將數值 1寫入 rd暫存器，反之則寫入數值 0。
+
+SLTIU
+sltiu rd, rs1, simm12
+常數部分為 sign-extended 12-bit，會將 12-bit做 sign-extension成 32-bit後，再與 rs1暫存器當作 unsigned number做比較·若 rs1暫存器小於常數，則將數值 1寫入 rd暫存器，反之則寫入數值 0。
+
+ANDI/ORI/XORI
+andi/ori/xori rd, rs1, simm12
+常數部分為 sign-extended 12-bit，會將 12-bit做 sign-extension成 32-bit後，再與 rs1暫存器做 AND/OR/XOR運算，將結果寫入 rd暫存器。
+
+SLLI/SRLI/SRAI
+slli/srli/srai rd, rs1, uimm5
+常數部分為 unsigned 5-bit，範圍為 0~31，為 shift amount，將 rs1暫存器做 shift運算，結果寫入 rd暫存器，SLLI為 logical左移，會補 0到最低位元，SRLI為 logical右移，會補 0到最高位元，SRAI為 arithmetic右移，會將原本的 sign bit複製到最高位元。
+
+LUI (Load upper immediate)
+lui rd, uimm20
+將 unsigned 20-bit放到 rd暫存器的最高 20-bit，並將剩餘的 12-bit補 0，此指令可與 ADDI搭配，一起組合出完整 32-bit的數值。
+
+AUIPC(add upper immediate to pc)
+auipc rd, uimm20
+unsigned 20-bit放到最高 20位元，剩餘 12位元補0，將此數值與 pc相加寫入 rd暫存器。
+
+
+
+
+
+
+
+
+
+
 
 * code : 
 
