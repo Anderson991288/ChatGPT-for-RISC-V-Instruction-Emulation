@@ -1,10 +1,11 @@
 ## RISC-V C++ Emulator
 
 ## 整數運算指令 (Integer Computational Instructions)
+
 整數暫存器與常數指令 (Integer Register-Immediate Instructions)
 指令為暫存器與常數之間的運算
 
-### ADDI
+### [ADDI](https://github.com/Anderson991288/RISC-V-Instruction-Emulation/blob/main/ADDI/README.md)
 addi rd, rs1, simm12
 常數部分為 sign-extended 12-bit，會將 12-bit做 sign-extension成 32-bit後，再與 rs1暫存器做加法運算，將結果寫入 rd暫存器，addi rd, rs1, 0 可被使用來當做 mov指令。
 
