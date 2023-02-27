@@ -9,7 +9,7 @@
 addi rd, rs1, simm12
 常數部分為 sign-extended 12-bit，會將 12-bit做 sign-extension成 32-bit後，再與 rs1暫存器做加法運算，將結果寫入 rd暫存器，addi rd, rs1, 0 可被使用來當做 mov指令。
 
-### SLTI
+### [SLTI](https://github.com/Anderson991288/RISC-V-Instruction-Emulation/blob/main/SLTI/README.md)
 slti rd, rs1, simm12
 常數部分為 sign-extended 12-bit，會將 12-bit做 sign-extension成 32-bit後，再與 rs1暫存器當做 signed number做比較，若 rs暫存器1小於常數，則將數值 1寫入 rd暫存器，反之則寫入數值 0。
 
