@@ -2,7 +2,7 @@
 
 ## RISC-V C++ Emulator
 
-### 使用C++模擬一個RISC-V CPU integer Register-Immediate Instructions : 
+### CPU integer Register-Immediate Instructions : 
 
 * code : 
 
