@@ -107,41 +107,21 @@ x31: 0
 
 ### 使用C++模擬一個RISC-V CPU ALU 指令 :
 * code(部分) :
-```
-// 定義 RISC-V CPU 的 ALU
-class ALU {
-public:
-    // 將兩個數值進行 AND 運算，並返回結果
-    int andOp(int operand1, int operand2) {
-        return operand1 & operand2;
-    }
-    // 將兩個數值進行 OR 運算，並返回結果
-    int orOp(int operand1, int operand2) {
-        return operand1 | operand2;
-    }
-    // 將兩個數值進行 XOR 運算，並返回結果
-    int xorOp(int operand1, int operand2) {
-        return operand1 ^ operand2;
-    }
-    // 將一個數值進行 NOT 運算，並返回結果
-    int notOp(int operand) {
-        return ~operand;
-    }
-    // 將一個數值進行左移運算，並返回結果
-    int shiftLeft(int operand, int shiftAmount) {
-        return operand << shiftAmount;
-    }
- // 將一個數值進行右移運算，並返回結果
-int shiftRight(int operand, int shiftAmount) {
-return operand >> shiftAmount;
-}
-// 將一個數值進行算術右移運算，並返回結果
-int arithmeticShiftRight(int operand, int shiftAmount) {
-return static_cast<int>(static_cast<unsigned>(operand) >> shiftAmount);
-}
-};
-```
 
+![code2](https://user-images.githubusercontent.com/68816726/221521509-60d901b5-1c58-414c-b904-b2c560459fad.png)
+
+* Result :
+```
+Result of add instruction: 30
+Result of addi instruction: 60
+Result of AND operation: 10100000
+Result of OR operation: 11111010
+Result of XOR operation: 01011010
+Result of NOT operation: 01010101
+Result of left shift operation: 10101000
+Result of right shift operation: 00101010
+Result of arithmetic right shift operation: 00101010
+```
 
 
 
