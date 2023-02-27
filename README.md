@@ -1,6 +1,6 @@
-# ChatGPT-for-RISC-V-Instruction-Emulation
+# RISC-V-Instruction-Emulation
 
-## ChatGPT-for-RISC-V C++ Emulator
+## RISC-V C++ Emulator
 
 ### 使用C++模擬一個RISC-V CPU integer Register-Immediate Instructions : 
 
