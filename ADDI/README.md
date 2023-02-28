@@ -7,13 +7,13 @@ addi rd, rs1, simm12 常數部分為 sign-extended 12-bit，會將 12-bit做 sig
 #include <iostream>
 
 int main() {
-    int rs1 = 5;  // 寄存器rs1的值
-    int imm = 10; // 立即数imm的值
-    int rd;       // 目标寄存器rd的值
+    int rs1 = 5;  // register rs1的值
+    int imm = 10; // imm的值
+    int rd;       // 目標寄存器rd的值
 
-    rd = rs1 + imm; // 执行ADDI指令
+    rd = rs1 + imm; // 執行ADDI指令
 
-    std::cout << "rs1 + imm = " << rd << std::endl; // 输出结果
+    std::cout << "rs1 + imm = " << rd << std::endl; // 輸出结果
 
     return 0;
 }
