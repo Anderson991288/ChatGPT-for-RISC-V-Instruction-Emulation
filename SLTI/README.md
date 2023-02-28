@@ -5,6 +5,10 @@ slti rd, rs1, simm12 常數部分為 sign-extended 12-bit，會將 12-bit做 sig
 
 ![SLTI](https://user-images.githubusercontent.com/68816726/221735256-6901afe8-d347-4de4-8842-334e97d09bec.png)
 
+假設register rs1的值為5，imm的值為10。我們使用rd來存SLTI指令的結果，
+如果rs1 < imm，則rd的值為1，否則為0。在執行SLTI指令後，我們使用std::cout來輸出結果，即rs1 < imm的值
+
+
 * Result :
 ```
 rs1 < imm = 1
