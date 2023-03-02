@@ -46,7 +46,8 @@ unsigned 20-bit放到最高 20位元，剩餘 12位元補0，將此數值與 pc�
 ## 整數暫存器與暫存器指令 (Integer Register-Register Insructions)
 指令為暫存器與暫存器之間的運算
 
-### [ADD/SUB]()
+### [ADD/SUB](https://github.com/Anderson991288/RISC-V-Instruction-Emulation/blob/main/ADD%20SUB/README.md)
+
 add/sub rd, rs1, rs2
 將 rs1暫存器與 rs2暫存器做加法/減法運算，將結果寫入 rd暫存器。
 
