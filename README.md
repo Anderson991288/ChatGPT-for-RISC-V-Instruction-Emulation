@@ -43,7 +43,24 @@ auipc rd, uimm20
 unsigned 20-bit放到最高 20位元，剩餘 12位元補0，將此數值與 pc相加寫入 rd暫存器。
 
 
+## 整數暫存器與暫存器指令 (Integer Register-Register Insructions)
+指令為暫存器與暫存器之間的運算
 
+### [ADD/SUB]()
+add/sub rd, rs1, rs2
+將 rs1暫存器與 rs2暫存器做加法/減法運算，將結果寫入 rd暫存器。
+
+### [SLT/SLTU]()
+slt/sltu rd, rs1, rs2
+將 rs1暫存器與 rs2暫存器當做 singed/unsigned number做比較，若 rs1暫存器小於 rs2暫存器，則將數值 1寫入 rd暫存器，反之則寫入數值 0。
+
+### [AND/OR/XOR]()
+and/or/xor rd, rs1, rs2
+將 rs1暫存器與 rs2暫存器做 AND/OR/XOR運算，將結果寫入 rd暫存器。
+
+### [SLL/SRL/SRA]()
+sll/srl/sra rd, rs1,, rs2
+將 rs1暫存器做 shift運算，結果寫入 rd暫存器，rs2暫存器的最低 5-bit為 shift amount。
 
 
 
