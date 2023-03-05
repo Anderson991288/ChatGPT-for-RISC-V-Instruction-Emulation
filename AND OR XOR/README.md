@@ -1,5 +1,6 @@
 # AND/OR/XOR
 
+and/or/xor rd, rs1, rs2 將 rs1暫存器與 rs2暫存器做 AND/OR/XOR運算，將結果寫入 rd暫存器。
 * Code :
 ```
 #include <iostream>
