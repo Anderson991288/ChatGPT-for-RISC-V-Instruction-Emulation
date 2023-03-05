@@ -78,6 +78,12 @@ jal rd, simm21
 jalr rd, rs1, simm12
 常數部分為 sign-extended 12-bit，跳躍的位址為 rs暫存器加上 sign-extended 12-bit，並把下一道指令的位址 pc+4寫入 rd暫存器中。
 
+### 條件跳躍 (Conditional Branches)
+
+### [BEQ/BNE/BLT/BLTU/BGE/BGEU](https://github.com/Anderson991288/RISC-V-Instruction-Emulation/blob/main/BEQ%20BNE%20BLT%20BLTU%20BGE%20BGUE/README.md)
+beq/bne/blt/bltu/bge/bgeu rs1, rs2, simm13
+
+常數部分為 sign-extended 13-bit，要注意的是此常數必須為 2的倍數，即最低位元為 0，因為此道指令編碼的常數位元數只有 12位元，所以只會將 signed 13-bit的最高 12位元放入指令編碼中，跳躍範圍為 -+4Kib，BEQ/BNE將 rs1暫存器與 rs2暫存器做相同與不同的比較，若成立則跳躍，BLT/BLTU將 rs1暫存器與 rs2暫存器分別做 signed/unsigned小於比較，若成立則跳躍，BGE/BGEU將 rs1暫存器與 rs2暫存器分別做 signed/unsigned大於等於比較，若成立則跳躍，跳躍的位址則為 pc加上 sign-extended 13-bit。
 
 
 
