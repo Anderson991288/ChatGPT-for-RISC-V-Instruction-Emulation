@@ -1,6 +1,8 @@
 
 # ADD SUB
 
+add/sub rd, rs1, rs2 將 rs1暫存器與 rs2暫存器做加法/減法運算，將結果寫入 rd暫存器。
+
 * Code :
 ```
 #include <iostream>
