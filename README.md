@@ -89,12 +89,12 @@ beq/bne/blt/bltu/bge/bgeu rs1, rs2, simm13
 ## 載入與儲存指令 (Load and Store Instructions)
 RV32I 必須使用載入與儲存指令去存取記憶體，前面的運算指令只能夠對暫存器做操作。
 
-### LW/LH/LHU/LB/LBU
+### [LW/LH/LHU/LB/LBU]()
 lw/lh/lhu/lb/lbu rd, rs1, simm12
 
 常數部分為 sign-extended 12-bit，載入位址則為 rs1暫存器加上 sign-extended 12-bit，LW為載入 32-bit資料寫入 rd暫存器，LH/LHU為載入 16-bit資料分別做 unsigned/signed extension成 32-bit後寫入 rd暫存器，LB/LBU為載入 8-bit資料分別做 unsigned/signed extension成 32-bit後寫入 rd暫存器。
 
-### SW/SH/SB
+### [SW/SH/SB]()
 sw/sh/sb rs2, rs1, simm12
 
 常數部分為 sign-extended 12-bit，儲存位址則為 rs1暫存器加上 sign-extended 12-bit，SW為將 rs2暫存器完整 32-bit資料寫入記憶體，SH為將 rs2暫存器最低 16-bit資料寫入記憶體，SB為將 rs2暫存器最低 8-bit資料寫入記憶體。
