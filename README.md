@@ -99,6 +99,33 @@ sw/sh/sb rs2, rs1, simm12
 
 常數部分為 sign-extended 12-bit，儲存位址則為 rs1暫存器加上 sign-extended 12-bit，SW為將 rs2暫存器完整 32-bit資料寫入記憶體，SH為將 rs2暫存器最低 16-bit資料寫入記憶體，SB為將 rs2暫存器最低 8-bit資料寫入記憶體。
 
+## Memory model
+定義了一組 FENCE指令，用來做不同 thread之間，記憶體的同步。
+## 控制與狀態暫存器指令 (Control and Status Register Instructions)
+
+### CSR Instructions
+
+### CSRRW/CSRRS/CSRRC/CSRRWI/CSRRSI/CSRRCI
+    定義了一組 CSR指令，可用來讀取寫入 CSR。
+
+### Timers and Counters
+
+### RDCYCLE[H]
+rdcycle用來讀取最低 31-bit cycle CSR，rdcycleh用來讀取最高 31-bit cycle數。
+
+### RDTIME[H]
+用來讀取 time CSR。
+
+### RDINSTRET
+用來讀取 instret CSR。
+
+### Environment Call and Breakpoints
+
+### ECALL
+使用來呼叫 system call。
+
+### EBREAK
+Debugger 用來切換進 Debugging 環境。
 
 
 
