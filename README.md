@@ -69,12 +69,12 @@ sll/srl/sra rd, rs1,, rs2
 分別有兩種控制轉移指令，無條件跳躍(Unconditional jumps)與條件分支(Conditional branches)
 無條件跳躍 (Unconditional Jumps)
 
-### [JAL (jump and link)]()
+### [JAL (jump and link)](https://github.com/Anderson991288/RISC-V-Instruction-Emulation/blob/main/JAL/README.md)
 jal rd, simm21
 常數部分為 sign-extended 21-bit，要注意的是此常數必須為 2的倍數，即最低位元為 0，因為此道指令編碼的常數位元數只有 20位元，所以只會將 signed 21-bit的最高 20位元放入指令編碼中，跳躍範圍為 -+1MiB，同時也會將下一道指令的位址 pc+4寫入 rd暫存器中，在標準的 calling convention中，rd暫存器會使用 x1。如果只是單純的 jump，並非是呼叫函示需要儲存其返回位址 pc+4，可用 jal x0, simm21 取代。
 
 
-### [JALR (jump and link register)]()
+### [JALR (jump and link register)](https://github.com/Anderson991288/RISC-V-Instruction-Emulation/blob/main/JALR/README.md)
 jalr rd, rs1, simm12
 常數部分為 sign-extended 12-bit，跳躍的位址為 rs暫存器加上 sign-extended 12-bit，並把下一道指令的位址 pc+4寫入 rd暫存器中。
 
