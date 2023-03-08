@@ -1,4 +1,8 @@
-# LW LH LHU LB LBU:
+# LW/LH/LHU/LB/LBU
+
+lw/lh/lhu/lb/lbu rd, rs1, simm12
+
+常數部分為 sign-extended 12-bit，載入位址則為 rs1暫存器加上 sign-extended 12-bit，LW為載入 32-bit資料寫入 rd暫存器，LH/LHU為載入 16-bit資料分別做 unsigned/signed extension成 32-bit後寫入 rd暫存器，LB/LBU為載入 8-bit資料分別做 unsigned/signed extension成 32-bit後寫入 rd暫存器。
 
 
 * Code :
