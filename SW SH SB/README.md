@@ -103,14 +103,15 @@ int main() {
 這兩個指令用於將數據存到記憶體中，其具體含義如下：
 
 SH 指令（Store Halfword）：將半字（16 位data）存到memory中。它的語法如下：
-
+```
 sh rs2, offset(rs1)
-
+```
 其中 rs1 和 rs2 分別是源寄存器和目標寄存器，offset 是一個偏移量，用於計算存儲數據的address
 
 SB 指令（Store Byte）：將字節（8 位數據）存儲到內存中。它的語法如下：
-
+```
 sb rs2, offset(rs1)
+```
 
 其中 rs1 和 rs2 分別是源寄存器和目標寄存器，offset 是一個偏移量，用於計算存儲數據的address
 
