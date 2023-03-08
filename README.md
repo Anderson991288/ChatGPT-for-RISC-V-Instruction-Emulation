@@ -101,6 +101,7 @@ sw/sh/sb rs2, rs1, simm12
 
 ## Memory model
 定義了一組 FENCE指令，用來做不同 thread之間，記憶體的同步。
+
 ## 控制與狀態暫存器指令 (Control and Status Register Instructions)
 
 ### CSR Instructions
