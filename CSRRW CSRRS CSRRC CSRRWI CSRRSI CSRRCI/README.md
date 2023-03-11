@@ -1,6 +1,7 @@
 # CSRRW/CSRRS/CSRRC/CSRRWI/CSRRSI/CSRRCI
 定義了一組 CSR指令，可用來讀取寫入 CSR。
 
+
 * Code :
 ### CSRRW/CSRRS
 
@@ -72,7 +73,7 @@ CSRRWI 指令：設置 CSR 中的值，並返回舊值
 
 using namespace std;
 
-// 定義 RISC-V CSR 寄存器
+// 定義 RISC-V CSR register
 uint32_t csr = 0x12345678;
 
 // CSRRC 指令的實現
