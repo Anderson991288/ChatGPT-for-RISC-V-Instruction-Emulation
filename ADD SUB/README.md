@@ -14,11 +14,11 @@ int main() {
 
     // ADD指令
     rd = rs1 + rs2; // 执行ADD指令，将rs1和rs2的值相加后存储到rd寄存器中
-    std::cout << "rs1 + rs2 = 0x" << std::hex << rd << std::endl; // 输出结果
+    std::cout << "rs1 + rs2 = 0x" << std::hex << rd << std::endl; // 輸出結果
 
     // SUB指令
     rd = rs1 - rs2; // 执行SUB指令，将rs1和rs2的值相减后存储到rd寄存器中
-    std::cout << "rs1 - rs2 = 0x" << std::hex << rd << std::endl; // 输出结果
+    std::cout << "rs1 - rs2 = 0x" << std::hex << rd << std::endl; // 輸出結果
 
     return 0;
 }
