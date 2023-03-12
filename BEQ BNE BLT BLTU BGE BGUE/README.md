@@ -6,57 +6,57 @@
 #include <iostream>
 
 int main() {
-    int rs1 = 0x100; // 寄存器rs1的值
-    int rs2 = 0x200; // 寄存器rs2的值
+    int rs1 = 0x100; // rs1的值
+    int rs2 = 0x200; // rs2的值
     int imm = 0x100; // 立即数，即跳转目标地址相对于当前指令地址的偏移量
-    int pc = 0x100; // 当前指令的地址（假设为0x100）
-    bool branch = false; // 是否进行分支跳转
+    int pc = 0x100; // 目前指令的地址（假設為0x100）
+    bool branch = false; // 是否進行分支跳轉
 
     // BEQ指令
     if (rs1 == rs2) {
-        pc += imm; // 将pc加上立即数imm，进行跳转
+        pc += imm; // 將pc加上imm，進行跳轉
         branch = true;
-        std::cout << "BEQ: pc = 0x" << std::hex << pc << std::endl; // 输出结果
+        std::cout << "BEQ: pc = 0x" << std::hex << pc << std::endl; // 輸出結果
     }
 
     // BNE指令
     if (rs1 != rs2) {
-        pc += imm; // 将pc加上立即数imm，进行跳转
+        pc += imm; // pc加上imm，進行跳轉
         branch = true;
-        std::cout << "BNE: pc = 0x" << std::hex << pc << std::endl; // 输出结果
+        std::cout << "BNE: pc = 0x" << std::hex << pc << std::endl; // 輸出結果
     }
 
     // BLT指令
     if (rs1 < rs2) {
-        pc += imm; // 将pc加上立即数imm，进行跳转
+        pc += imm; // pc加上imm，進行跳轉
         branch = true;
-        std::cout << "BLT: pc = 0x" << std::hex << pc << std::endl; // 输出结果
+        std::cout << "BLT: pc = 0x" << std::hex << pc << std::endl; // 輸出結果
     }
 
     // BLTU指令
     if ((unsigned int)rs1 < (unsigned int)rs2) {
-        pc += imm; // 将pc加上立即数imm，进行跳转
+        pc += imm; // pc加上imm，進行跳轉
         branch = true;
-        std::cout << "BLTU: pc = 0x" << std::hex << pc << std::endl; // 输出结果
+        std::cout << "BLTU: pc = 0x" << std::hex << pc << std::endl; // 輸出結果
     }
 
     // BGE指令
     if (rs1 >= rs2) {
-        pc += imm; // 将pc加上立即数imm，进行跳转
+        pc += imm; // pc加上imm，進行跳轉
         branch = true;
-        std::cout << "BGE: pc = 0x" << std::hex << pc << std::endl; // 输出结果
+        std::cout << "BGE: pc = 0x" << std::hex << pc << std::endl; // 輸出結果
     }
 
     // BGEU指令
     if ((unsigned int)rs1 >= (unsigned int)rs2) {
-        pc += imm; // 将pc加上立即数imm，进行跳转
+        pc += imm; // pc加上imm，進行跳轉
         branch = true;
-        std::cout << "BGEU: pc = 0x" << std::hex << pc << std::endl; // 输出结果
+        std::cout << "BGEU: pc = 0x" << std::hex << pc << std::endl; // 輸出結果
     }
 
     // 如果没有进行分支跳转，则输出当前指令的地址
     if (!branch) {
-        std::cout << "No branch: pc = 0x" << std::hex << pc << std::endl; // 输出结果
+        std::cout << "No branch: pc = 0x" << std::hex << pc << std::endl; // 輸出結果
     }
 
     return 0;
