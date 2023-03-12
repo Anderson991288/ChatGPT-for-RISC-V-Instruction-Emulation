@@ -14,7 +14,7 @@ int main() {
     unsigned int rd;           // 目標register rd的值
 
     // LUI指令
-    rd = imm << 12; // 执行LUI指令，将imm左移12位後存到rd register中
+    rd = imm << 12; // 執行LUI指令，將imm左移12位後存到rd register中
     std::cout << "imm << 12 = 0x" << std::hex << rd << std::endl;
 
     return 0;
