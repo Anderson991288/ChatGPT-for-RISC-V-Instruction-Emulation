@@ -99,6 +99,7 @@ sw/sh/sb rs2, rs1, simm12
 
 常數部分為 sign-extended 12-bit，儲存位址則為 rs1暫存器加上 sign-extended 12-bit，SW為將 rs2暫存器完整 32-bit資料寫入記憶體，SH為將 rs2暫存器最低 16-bit資料寫入記憶體，SB為將 rs2暫存器最低 8-bit資料寫入記憶體。
 
+
 ## Memory model
 定義了一組 FENCE指令，用來做不同 thread之間，記憶體的同步。
 
