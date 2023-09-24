@@ -8,7 +8,7 @@ jal rd, simm21 常數部分為 sign-extended 21-bit，要注意的是此常數�
 int main() {
     int pc = 0x100; 
     int imm = 0x200; 
-    int rd; // 目标寄存器rd的值
+    int rd; // 目標暫存器rd的值
 
     // JAL指令
     rd = pc + 4; 
