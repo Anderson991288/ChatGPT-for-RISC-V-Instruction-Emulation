@@ -11,15 +11,15 @@ int main() {
     int rd;                 // register rd的值
 
     // ANDI指令
-    rd = rs1 & imm; // 执行ANDI指令
+    rd = rs1 & imm; //  執行ANDI指令
     std::cout << "rs1 & imm = 0x" << std::hex << rd << std::endl; // 輸出结果
 
     // ORI指令
-    rd = rs1 | imm; // 执行ORI指令
+    rd = rs1 | imm; // 執行ORI指令
     std::cout << "rs1 | imm = 0x" << std::hex << rd << std::endl; // 輸出结果
 
     // XORI指令
-    rd = rs1 ^ imm; // 执行XORI指令
+    rd = rs1 ^ imm; // 執行XORI指令
     std::cout << "rs1 ^ imm = 0x" << std::hex << rd << std::endl; // 輸出结果
 
     return 0;
