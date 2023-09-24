@@ -8,7 +8,7 @@
 int main() {
     int rs1 = 0x100; // rs1的值
     int rs2 = 0x200; // rs2的值
-    int imm = 0x100; // 立即数，即跳转目标地址相对于当前指令地址的偏移量
+    int imm = 0x100; // 立即數，即跳轉目標位址相對於目前指令位址的偏移量
     int pc = 0x100; // 目前指令的地址（假設為0x100）
     bool branch = false; // 是否進行分支跳轉
 
@@ -54,7 +54,7 @@ int main() {
         std::cout << "BGEU: pc = 0x" << std::hex << pc << std::endl; // 輸出結果
     }
 
-    // 如果没有进行分支跳转，则输出当前指令的地址
+    // 如果沒有進行分支跳轉，則輸出目前指令的位址
     if (!branch) {
         std::cout << "No branch: pc = 0x" << std::hex << pc << std::endl; // 輸出結果
     }
