@@ -6,21 +6,20 @@ slli/srli/srai rd, rs1, uimm5 常數部分為 unsigned 5-bit，範圍為 0~31，
 #include <iostream>
 
 int main() {
-    unsigned int rs1 = 0x3f; // 寄存器rs1的值（二进制表示为00111111）
+    unsigned int rs1 = 0x3f; // 寄存器rs1的值（二進位表示為00111111）
     int shamt = 4;           // 移位量shamt的值
-    int rd;                  // 目标寄存器rd的值
-
+    int rd;                  // 目標暫存器rd的值
     // SLLI指令
-    rd = rs1 << shamt; // 执行SLLI指令
-    std::cout << "rs1 << shamt = 0x" << std::hex << rd << std::endl; // 输出结果
+    rd = rs1 << shamt; // 執行SLLI指令
+    std::cout << "rs1 << shamt = 0x" << std::hex << rd << std::endl; // 輸出结果
 
     // SRLI指令
-    rd = rs1 >> shamt; // 执行SRLI指令
-    std::cout << "rs1 >> shamt = 0x" << std::hex << rd << std::endl; // 输出结果
+    rd = rs1 >> shamt; // 執行SRLI指令
+    std::cout << "rs1 >> shamt = 0x" << std::hex << rd << std::endl; // 輸出结果
 
     // SRAI指令
-    rd = (int)rs1 >> shamt; // 执行SRAI指令，需要将无符号数rs1强制转换为有符号数int
-    std::cout << "(int)rs1 >> shamt = 0x" << std::hex << rd << std::endl; // 输出结果
+    rd = (int)rs1 >> shamt; // 執行SRAI指令，需要將無符號數rs1強制轉換為有符號數int
+    std::cout << "(int)rs1 >> shamt = 0x" << std::hex << rd << std::endl; // 輸出结果
 
     return 0;
 }
